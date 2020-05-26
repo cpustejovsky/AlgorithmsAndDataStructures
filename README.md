@@ -1,5 +1,5 @@
 # Big O Notation
-
+![Big O Notation Chart](images/big-o-chart.png)
 ## Why Does it matter?
 
 - Provides devs with precise grammar to talk about code performance
@@ -14,6 +14,8 @@
 3. For loops, loop.length * operationsInsideLoop
    
 **auxilary space complexity:** the space required by the algorithm, not including space taken up by inputs.
+
+
 
 # Problem Solving
 ## How to improve problem solving skills
@@ -32,7 +34,24 @@
 * Progress to more complex exmaples
 * Explore examples with empty inputs
 * Explore examples with invalid inputs
-## 3. Break it down
+## 3. Break it down (process is important!)
+* Explicitly write out the steps you need to take
+* Force yourself to think about the code you'll write
+* Catch any lingering conceptual issues or misunderstandings before you dive in
 ## 4. Solve/Simplify
+* If you can't solve the problem, solve a simply problem
+* Break problem down to create simpler problem
+* Example:
+  * Find how to do it for one iteration, then loop it
+  * If you don't know something, mention it, account for it, move on, and ignore it (what specific method name to use, etc.)
 ## 5. Look back and refactor
-
+* Connect the dots, then draw the image you've created with connecting dots. Once you realize it's a penguin, draw the penguin.
+* In interview, talk about what you don't like (readability, efficiency, etc.) and how you'd refactor
+* Refactoring Questions
+  * Can you check the result?
+  * Can you get that result a different way?
+  * Can you understand the code at a glance? How much time does it take to reason about the code?
+  * Is this code re-usable?
+  * Can you improve the performance?
+  * Are there any other ways to refactor?
+  * How have others solved this problem? (Stack Overflow for real world; other applicants/interviewees in the interview context)
