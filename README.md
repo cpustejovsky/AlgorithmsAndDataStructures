@@ -55,3 +55,29 @@
   * Can you improve the performance?
   * Are there any other ways to refactor?
   * How have others solved this problem? (Stack Overflow for real world; other applicants/interviewees in the interview context)
+
+# Problem Solving Patterns
+## Frequency Counter Pattern
+* Uses objects or set to collect values or frequencies of values.
+* Often avoids nested loops and results in O(n) time instead of O(n^2)
+### Example
+```javascript
+const validAnagram = (x, y) => {
+  if(x.length !== y.length) return false
+  let xCounter = {};
+  let yCounter = {};
+  y.split("").forEach((letter) => {
+    yCounter[letter] ? yCounter[letter] += 1: yCounter[letter] = 1;
+  });
+  x.split("").forEach((letter) => {
+    xCounter[letter] ? xCounter[letter] += 1: xCounter[letter] = 1;
+  });
+  for(let key in xCounter){
+    if(xCounter[key] !== yCounter[key]) return false
+  }
+  return true
+};
+validAnagram("anagram", "nagaram"); //true
+validAnagram("awesome", "awesom"); //false
+```
+
