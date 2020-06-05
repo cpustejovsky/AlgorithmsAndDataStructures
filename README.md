@@ -124,3 +124,34 @@ sumZero([-3, -2, -1, 0, 1, 2, 3]); //[-3,3]
 sumZero([-3, -2, -1, 0, 1, 2, 4]); //[-2,2]
 sumZero([-3, -2, -1, 0, 3, 4, 5]); //"No sums"
 ```
+
+## Sliding Window Pattern
+- This pattern involves creating a window
+  - either an array or a number that moves from one position to anther
+- Depending on __ condition, window will either increase or closed and create a new window
+- Useful for tracking a subset of data in an array, string, etc.
+
+### Example
+```javascript
+const maxSubarraySum = (arr, num) => {
+  let maxSum = 0;
+  //checks if array is at least the size of the number of elements to add together
+  if (arr.length < num) return null;
+  //adds up the first window of numbers
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  //sets up tempSum as maxSum
+  let tempSum = maxSum;
+  //starting at i = num (where previous loop left off), loops through array
+  for (let i = num; i < arr.length; i++) {
+    //sets adds next element to tempSum and subtracts previous element
+    tempSum = tempSum - arr[i - num] + arr[i];
+    //compare total
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+};
+
+maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); //19
+```
