@@ -102,6 +102,7 @@ validAnagram("awesome", "awesom"); //false
 
 - Creating pointer or values that correspond to an index or position and move towards the beginning, end, or middle based on a certain condition.
 - Uses a loop or recursion. The point is to avoid nested loop or O(n^2) complexity
+
 ### Example
 
 ```javascript
@@ -126,12 +127,14 @@ sumZero([-3, -2, -1, 0, 3, 4, 5]); //"No sums"
 ```
 
 ## Sliding Window Pattern
+
 - This pattern involves creating a window
   - either an array or a number that moves from one position to anther
-- Depending on __ condition, window will either increase or closed and create a new window
+- Depending on \_\_ condition, window will either increase or closed and create a new window
 - Useful for tracking a subset of data in an array, string, etc.
 
 ### Example
+
 ```javascript
 const maxSubarraySum = (arr, num) => {
   let maxSum = 0;
@@ -153,17 +156,35 @@ const maxSubarraySum = (arr, num) => {
   return maxSum;
 };
 
-maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); //19
+maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); // 19
 ```
 
 ## Divide and Conquer
+
 - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
 - Steps:
-   1) Figure out base case
-   2) Divide || Decrease problem until it becomes base case
+  1.  Figure out base case
+  2.  Divide || Decrease problem until it becomes base case
 - For an array, base case is usually `[]`
 - How to Quicksort
-  1) Pick a pivot
-  2) Partition the array into 2 subarrays (elements < pivot, pivot, elements > pivot)
-  3) Call quicksort recursively on subarrays
-     
+  1. Pick a pivot
+  2. Partition the array into 2 subarrays (elements < pivot, pivot, elements > pivot)
+  3. Call quicksort recursively on subarrays
+
+## Recursion
+
+- You make sure you have a base case, you return the right thing, and you call the function until you give it. (see above example for recursion)
+
+### example
+
+```javascript
+const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
+
+factorial(1); // 1
+factorial(2); // 2
+factorial(3); // 6
+factorial(4); // 24
+factorial(5); // 120
+factorial(6); // 720
+factorial(7); // 5040
+```
