@@ -155,3 +155,15 @@ const maxSubarraySum = (arr, num) => {
 
 maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); //19
 ```
+
+## Divide and Conquer
+- This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
+- Steps:
+   1) Figure out base case
+   2) Divide || Decrease problem until it becomes base case
+- For an array, base case is usually `[]`
+- How to Quicksort
+  1) Pick a pivot
+  2) Partition the array into 2 subarrays (elements < pivot, pivot, elements > pivot)
+  3) Call quicksort recursively on subarrays
+     
