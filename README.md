@@ -188,3 +188,32 @@ factorial(5); // 120
 factorial(6); // 720
 factorial(7); // 5040
 ```
+
+## Algorithm Examples
+
+### Fibonacci Sequence
+
+```javascript
+//each number is the sum of the two preceding ones, starting from 0 to 1
+const fibonacciSequence = (index) => {
+  let fibArr = [0, 1];
+  for (let i = 1; i < index; i++) {
+    fibArr.push(fibArr[i] + fibArr[i - 1]);
+  }
+  return fibArr[index];
+}
+
+fibonacciSequence(0); // 0
+fibonacciSequence(1); // 1
+fibonacciSequence(2); // 1
+fibonacciSequence(3); // 2
+fibonacciSequence(4); // 3
+fibonacciSequence(5); // 5
+fibonacciSequence(6); // 8
+fibonacciSequence(7); // 13
+fibonacciSequence(8); // 21
+fibonacciSequence(9); // 34
+fibonacciSequence(10); // 55
+```
+
+Addtitional code examples and performance of each found [here](https://jsperf.com/fibo-algo-tests2)
